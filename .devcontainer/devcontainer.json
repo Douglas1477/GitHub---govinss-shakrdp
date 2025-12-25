@@ -1,0 +1,20 @@
+{
+    "name": "Terminal Root",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {},
+        "ghcr.io/devcontainers/features/node:1": {}
+    },
+    // Força o Codespaces a logar você como root
+    "remoteUser": "root",
+    
+    "postCreateCommand": "apt-get update && apt-get install -y qemu-kvm libvirt-daemon-system cpu-checker",
+    
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash"
+            }
+        }
+    }
+}
